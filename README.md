@@ -1,13 +1,15 @@
 # Pi-Hole
 
-## Create Volumes
+## Setup
+
+### Create Volumes
 
 ```
 docker volume create pihole
 docker volume create dnsmasq
 ```
 
-## Docker Run
+### Docker Run
 
 ```
 docker run \
@@ -36,7 +38,7 @@ e.g.:
 docker run --name=pihole -e TZ=America/New_York -e WEBPASSWORD=pihole1 -e SERVERIP=192.168.1.10 -v pihole:/etc/pihole -v dnsmasq:/etc/dnsmasq.d -p 80:80 -p 53:53/tcp -p 53:53/udp --restart=unless-stopped pihole/pihole
 ```
 
-## Setup
+### Configuration
 
 Configure at:
 
@@ -44,11 +46,11 @@ Configure at:
 http://YOURSERVERIP/admin
 ```
 
-## Reference
+### Reference
 
 [https://codeopolis.com/posts/running-pi-hole-in-docker-is-remarkably-easy]
 
-## Systemd
+## Issues: Systemd
 
 ```
 sudo systemctl disable systemd-resolved
@@ -75,5 +77,5 @@ sudo systemctl restart NetworkManager
 
 ### Reference
 
-[https://askubuntu.com/a/907249]
+https://askubuntu.com/a/907249
 
