@@ -46,9 +46,13 @@ Configure at:
 http://YOURSERVERIP/admin
 ```
 
+### Router
+
+Point your router's DNS requests to YOURSERVERIP, or do it on a machine by machine basis.
+
 ### Reference
 
-[https://codeopolis.com/posts/running-pi-hole-in-docker-is-remarkably-easy]
+https://codeopolis.com/posts/running-pi-hole-in-docker-is-remarkably-easy
 
 ## Issues: Systemd
 
